@@ -14,6 +14,9 @@ class SideBarComponent extends React.Component {
     render() {
         return(
             <div id="side-bar-container">
+                <div className="mobile-owl-image-wrapper">
+                    <div className="mobile-owl-image"></div>
+                </div>
                 <RegistrationComponent />
             </div>
         )

@@ -12,13 +12,13 @@ class RegistrationComponent extends React.Component {
         return(
             <div id="registration-form-container">
                 <div className="registration-form">
-                    <input type="text"/>
-                    <input type="email"/>
-                    <input type="password"/>
-                    <input type="text"/>
-                    <input type="text"/>
-                    <input type="text"/>
-                    <input type="text"/>
+                    <input placeholder="Username" type="text"/>
+                    <input placeholder="Email" type="email"/>
+                    <input placeholder="Password" type="password"/>
+                    <input placeholder="First Name" type="text"/>
+                    <input placeholder="Last Name" type="text"/>
+                    <input placeholder="Phone" type="text"/>
+                    <input placeholder="Address" type="text"/>
                     <button>Register</button>
                     <h6>Already Signed Up?</h6>
                 </div>
