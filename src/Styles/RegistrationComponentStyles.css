@@ -1,0 +1,17 @@
+#registration-form-container {
+    height: 100%;
+    background-color: #EFF3F4;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.registration-form {
+    border: 2px solid #979797;
+    border-radius: 2px;
+    height: 400px;
+    width: 500px;
+}
+.registration-form input {
+    height: 20px;
+}

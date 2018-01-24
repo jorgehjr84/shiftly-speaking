@@ -1,0 +1,39 @@
+#login-form-container {
+    background-color: #EFF3F4;
+    width: 45%;
+    float: right;
+    margin-right: 40px;
+    height: 100%;
+}
+#login-form-container form {
+    background-color: #FFFFFF;
+    width: 90%;
+    height: 70%;
+    text-align: center;
+}
+.email-icon {
+    width: 15px;
+    height: 15px;
+}
+.password-icon {
+    width: 15px;
+    height: 15px;
+}
+#login-form-container input{
+    color: #FFFFFF;
+    width: 58%;
+    height: 42px;
+    border-radius: 4px;
+    border: none;
+}
+.email-input {
+
+}
+.password-input {
+    
+}
+.login-button {
+    background-color: orange;
+    border: 1px solid darkgray;
+    border-radius: 2px;
+}
