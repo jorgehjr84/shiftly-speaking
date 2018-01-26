@@ -1,12 +1,9 @@
 import React from 'react';
+import {
+    Link
+  } from 'react-router-dom';
 
-import '../Styles/RegistrationComponentStyles.css'; 
-
-class RegistrationComponent extends React.Component {
-    constructor(props) {
-        super(props);
-
-    }
+class RegistrationForm extends React.Component {
 
     render() {
         return(
@@ -20,11 +17,11 @@ class RegistrationComponent extends React.Component {
                     <input placeholder="Phone" type="text"/>
                     <input placeholder="Address" type="text"/>
                     <button>Register</button>
-                    <h6>Already Signed Up?</h6>
+                    <Link className="link-to-login" to='/login'>Already Signed Up?</Link>
                 </div>
             </div>
         )
     }
 }
 
-export default RegistrationComponent;
+export default RegistrationForm;

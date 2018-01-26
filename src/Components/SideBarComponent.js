@@ -1,23 +1,21 @@
 import React from 'react';
 
-import RegistrationComponent from './RegistrationComponent';
-import LoginComponent from './LoginComponent';
-
 import "../Styles/SideBarComponentStyles.css";
 
 class SideBarComponent extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
 
     }
 
     render() {
+        console.log(this.props.component);
         return(
             <div id="side-bar-container">
                 <div className="mobile-owl-image-wrapper">
                     <div className="mobile-owl-image"></div>
                 </div>
-                <RegistrationComponent />
+                {this.props.children}
             </div>
         )
     }

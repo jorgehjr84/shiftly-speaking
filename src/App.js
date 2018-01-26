@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-import './App.css';
-
 import {
-  BrowserRouter as Router,
   Route,
-  Link
-} from 'react-router';
-import LandingPageComponent from './Components/LandingPage/LandingPageComponent.js';
+  BrowserRouter as Router
+} from 'react-router-dom';
+
+import './App.css';
+import LoginComponent from './Components/Login/LoginComponent.js';
+import RegistrationComponent from './Components/Registration/RegistrationComponent.js';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-          <LandingPageComponent />
-      </div>
-    );
+      <Router>
+        <div className="App">
+            <Route exact path='/' component={LoginComponent}/>
+            <Route path='/registration' component={RegistrationComponent}/>
+            <Route path='/login' component={LoginComponent}/>
+        </div>
+      </Router>
+    )
   }
 }
 
