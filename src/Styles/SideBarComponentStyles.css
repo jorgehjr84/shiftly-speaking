@@ -1,0 +1,29 @@
+#side-bar-container {
+    width: 30%;
+    height: 100%;
+    background-color: #EFF3F4;
+    float: right;
+}
+.mobile-owl-image-wrapper {
+    display: none; 
+}
+
+
+@media screen and (max-width: 1080px) {
+    #side-bar-container {
+        float: none;
+        width: 100%;
+    }
+    .mobile-owl-image-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .mobile-owl-image {
+        background: url('../img/Logo.png') no-repeat;
+        background-size: 200px;
+        width: 200px;
+        height: 139px;
+        position: absolute;
+        top: 5px;
+    }
+}

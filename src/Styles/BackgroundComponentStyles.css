@@ -1,0 +1,16 @@
+#background-component {
+    background-color: #DFDAD0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+#background-component .logo {
+    background: url('../img/Logo.png') no-repeat;
+    background-size: 400px; 
+    position: relative;
+    width: auto;
+    height: 600px;
+    max-width: 500px;
+    max-height: 570px;
+}
