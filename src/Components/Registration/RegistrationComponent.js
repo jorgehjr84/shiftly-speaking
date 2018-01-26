@@ -1,11 +1,9 @@
 import React from 'react';
 
-import LoginComponent from '../LoginComponent';
-import RegistrationComponent from '../RegistrationComponent';
-import './landingStyles.css';
 import BackgroundComponent from '../BackgroundComponent';
 import SideBarComponent from '../SideBarComponent';
-
+import RegistrationForm from './RegistrationForm';
+import '../../Styles/RegistrationComponentStyles.css'; 
 
 const logoStyles = {
     "top": "150px",
@@ -13,23 +11,22 @@ const logoStyles = {
     "rotate": "rotate()"
 }
 
-class LandingPageComponent extends React.Component {
+class RegistrationComponent extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            login: true
-        }
     }
 
     render() {
         return(
-            <div id="landing-page-container">
+            <div id="registration-page-container">
                 <BackgroundComponent logoStyles={logoStyles}/>
-                <SideBarComponent />
+                <SideBarComponent>
+                    <RegistrationForm/>
+                </SideBarComponent>
             </div>
         )
     }
 }
 
-export default LandingPageComponent;
+export default RegistrationComponent;

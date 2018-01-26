@@ -1,39 +1,64 @@
-#login-form-container {
-    background-color: #EFF3F4;
-    width: 45%;
-    float: right;
-    margin-right: 40px;
+#login-page-container {
+    position: absolute;
     height: 100%;
+    width: 100%;
 }
-#login-form-container form {
+#login-form-container {
+    width: 95%;
+    height: 100%;
+    background-color: #EFF3F4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.login-form {
+    width: 361px;
+    height: 427px;
     background-color: #FFFFFF;
-    width: 90%;
-    height: 70%;
-    text-align: center;
-}
-.email-icon {
-    width: 15px;
-    height: 15px;
-}
-.password-icon {
-    width: 15px;
-    height: 15px;
-}
-#login-form-container input{
-    color: #FFFFFF;
-    width: 58%;
-    height: 42px;
-    border-radius: 4px;
-    border: none;
-}
-.email-input {
-
-}
-.password-input {
-    
-}
-.login-button {
-    background-color: orange;
-    border: 1px solid darkgray;
+    border: 1px solid #979797;
     border-radius: 2px;
+    margin-top: 109px;
+    padding-top: 50px;
+    z-index: 100;
+    position: relative;
+    margin-bottom: 199px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.login-form input {
+    width: 80%;
+    height: 30px;
+    margin: 10px auto 10px auto;
+    padding-left: 15px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+}
+.login-form button {
+    width: 80%;
+    height: 35px;
+    margin-top: 20px;
+    background-color: #F7AE45;
+    color: white;
+    border: none;
+    border-radius: 7px;
+}
+.login-form button:focus {
+    outline: none;
+}
+.login-form a {
+    display: inline-block
+}
+
+@media screen and (max-width: 1288px) {
+    .login-form {
+        width: 317px;
+    }
+}
+@media screen and (max-width: 1080px) {
+    .login-form {
+        height: 458px; 
+        margin: 0 auto 277px auto;
+        top: 117px;
+    }
 }
