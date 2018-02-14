@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   Route,
   Redirect,
-  BrowserRouter as Router
+  BrowserRouter as Router,
 } from 'react-router-dom';
 import * as firebase from 'firebase';
 
@@ -26,9 +26,6 @@ class App extends Component {
     super();
     
     this.state = {
-      // userName: '',
-      // user: null,
-      // redirectToLogin: false,
       uid: null
     }
 
@@ -53,25 +50,22 @@ class App extends Component {
   render() {
       return (
         <Router>
-          <div className="App">
-              <Route exactly path="/" component={LoginComponent}/> 
+            <div>
+              <Route path="/login" component={LoginComponent}/> 
               <Route path='/registration' component={RegistrationComponent}/>
               <RouteWhenAuthorized path='/account' component={Account}/>
-          </div>
+            </div>
         </Router>
       )
   }
 }
 
 const RouteWhenAuthorized = ({component: Component, ...rest}) => (
-  <Route {...rest} render={renderProps => (
+  <Route {...rest} render={(props) => (
     isAuthenticated() ? (
-      <Component {...renderProps} />
+      <Component {...props} />
     ) : (
-      <Redirect to={{
-        pathname: '/',
-        state: {from: renderProps.location}
-      }} />
+      <Redirect to="/login"/>
     )
   )}/>
 )
