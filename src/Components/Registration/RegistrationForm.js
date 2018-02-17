@@ -4,12 +4,18 @@ import {
     Redirect
   } from 'react-router-dom';
 import firebase from 'firebase';
+import Alert from '../common/alert';
 
 class RegistrationForm extends React.Component {
     constructor(props) {
         super(props)
 
+        this.state = {
+            showRegisteredSuccessAlert: false
+        }
+
         this.register = this.register.bind(this);
+        this.closeAlert = this.closeAlert.bind(this);
     }
 
     register() {
@@ -24,8 +30,19 @@ class RegistrationForm extends React.Component {
                 address: this.address.value
             });
         }).then(() => {
-            <Redirect to='/account' />    
+            this.setState({
+                showRegisteredSuccessAlert: true
+            }, () => { 
+                setTimeout(this.closeAlert, 4000)
+            })
         });
+    }
+
+    closeAlert() {
+        this.setState({
+            showRegisteredSuccessAlert: false
+        });
+        <Redirect to='/account' />    
     }
 
     render() {
@@ -41,6 +58,12 @@ class RegistrationForm extends React.Component {
                     <input ref={address => this.address = address} placeholder="Address" type="text"/>
                     <button onClick={this.register}>Register</button>
                     <Link className="link-to-login" to='/login'>Already Signed Up?</Link>
+                
+                    <Alert 
+                    show={this.state.showRegisteredSuccessAlert} 
+                    color={'#2ecc71'}
+                    onClose={this.closeAlert}
+                    alertMessage="Success! Registered Successfully"/>
                 </div>
             </div>
         )
