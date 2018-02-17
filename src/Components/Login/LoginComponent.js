@@ -11,7 +11,7 @@ const logoStyles = {
     "rotate": "rotate()"
 }
 
-class LandingPageComponent extends React.Component {
+class LoginComponent extends React.Component {
     constructor(props) {
         super(props);
 
@@ -32,4 +32,4 @@ class LandingPageComponent extends React.Component {
     }
 }
 
-export default LandingPageComponent;
+export default LoginComponent;
